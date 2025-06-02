@@ -1,6 +1,11 @@
-import 'package:flavors/flavor/flavor_config.dart';
-import 'package:flavors/main_common.dart';
+import 'package:flavors/flavors.dart';
 
-void main() {
-  mainCommon(flavor: Flavor.prod, baseUrl: 'https//prod.api.com', name: 'Prod');
+import 'main.dart' as runner;
+
+Future<void> main() async {
+  // Set the app flavor to development
+  F.appFlavor = Flavor.staging;
+
+  // Run the main application
+  await runner.main();
 }

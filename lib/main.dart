@@ -1,8 +1,15 @@
 import 'dart:async';
 
-import 'package:flavors/flutter_app.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-FutureOr<void> main() async {
-  runApp(FlutterApp());
+import 'app.dart';
+import 'flavors.dart';
+
+FutureOr<void> main() {
+  F.appFlavor = Flavor.values.firstWhere(
+    (element) => element.name == appFlavor,
+  );
+
+  runApp(const App());
 }
