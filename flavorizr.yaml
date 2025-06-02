@@ -1,0 +1,20 @@
+ide: "vscode"
+flavors:
+  dev:
+    app:
+      name: "Dev App"
+
+    android:
+      applicationId: "com.example.dev"
+  staging:
+    app:
+      name: "Staging App"
+
+    android:
+      applicationId: "com.example.staging"
+  prod:
+    app:
+      name: "Prod App"
+
+    android:
+      applicationId: "com.example.prod"
